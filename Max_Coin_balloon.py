@@ -34,7 +34,7 @@ class Solution(object):
         elif length == 2:
             return nums[0] * nums[1] + max(nums)
         while len(nums) > 2:
-            # 去中间的最小值来计算金币
+            # 取中间的最小值来计算金币
             min_value = min(nums[1:len(nums) - 1])
             min_index = nums.index(min_value)
             left = nums[min_index - 1] if min_index > 0 else 1
@@ -46,3 +46,4 @@ class Solution(object):
 l = [4, 5, 3, 2, 7]
 s = Solution()
 print s.maxCoins(l)
+# [3, 8, 11, 5, 4]有问题
